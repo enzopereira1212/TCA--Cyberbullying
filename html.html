@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberbullying e Crimes Digitais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+        .section {
+            scroll-margin-top: 100px;
+        }
+        .quiz-option {
+            transition: all 0.3s ease;
+        }
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-option.selected {
+            background-color: #4f46e5;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold flex items-center">
+                    <i data-feather="shield" class="mr-2"></i> Cyberbullying e Crimes Digitais
+                </h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#oque-e" class="hover:text-gray-200 transition">O que é?</a></li>
+                        <li><a href="#comparativo" class="hover:text-gray-200 transition">Comparativo</a></li>
+                        <li><a href="#protecao" class="hover:text-gray-200 transition">Como se proteger</a></li>
+                        <li><a href="#quiz" class="hover:text-gray-200 transition">Quiz</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden" id="menu-toggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <ul class="space-y-2">
+                    <li><a href="#oque-e" class="block py-2 hover:bg-indigo-700 rounded px-2 transition">O que é?</a></li>
+                    <li><a href="#comparativo" class="block py-2 hover:bg-indigo-700 rounded px-2 transition">Comparativo</a></li>
+                    <li><a href="#protecao" class="block py-2 hover:bg-indigo-700 rounded px-2 transition">Como se proteger</a></li>
+                    <li><a href="#quiz" class="block py-2 hover:bg-indigo-700 rounded px-2 transition">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Entenda os perigos do mundo digital</h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Aprenda a identificar e se proteger contra cyberbullying e crimes digitais</p>
+            <a href="#oque-e" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition inline-flex items-center">
+                Começar <i data-feather="arrow-down" class="ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- O que é Cyberbullying -->
+    <section id="oque-e" class="section py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/technology/640x360/1" alt="Cyberbullying" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="alert-triangle" class="mr-3 text-indigo-600"></i> O que é Cyberbullying?
+                    </h2>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        Cyberbullying é quando alguém usa a internet, redes sociais, mensagens ou outros meios digitais para humilhar, ofender, ameaçar ou excluir outra pessoa.
+                    </p>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        Ele pode acontecer através de mensagens ofensivas, criação de perfis falsos, divulgação de boatos, exclusão intencional de grupos ou qualquer outra forma de agressão psicológica no ambiente virtual.
+                    </p>
+                    <p class="text-gray-600 text-lg">
+                        As consequências podem ser graves, causando problemas emocionais, sociais e até mesmo físicos nas vítimas, como depressão, ansiedade e isolamento social.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparativo -->
+    <section id="comparativo" class="section py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
+                <i data-feather="scale" class="mr-3 text-indigo-600"></i> Cyberbullying x Crimes Digitais
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
+                <!-- Cyberbullying -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
+                    <h3 class="text-2xl font-semibold text-indigo-600 mb-4 flex items-center">
+                        <i data-feather="message-square" class="mr-2"></i> Cyberbullying
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="mr-2 text-green-500 mt-1"></i>
+                            <span>Ofensas e xingamentos em redes sociais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="mr-2 text-green-500 mt-1"></i>
+                            <span>Espalhar boatos ou fofocas online</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="mr-2 text-green-500 mt-1"></i>
+                            <span>Criação de perfis falsos para difamar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="mr-2 text-green-500 mt-1"></i>
+                            <span>Exclusão intencional de grupos ou chats</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Crimes Digitais -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+                    <h3 class="text-2xl font-semibold text-red-600 mb-4 flex items-center">
+                        <i data-feather="alert-octagon" class="mr-2"></i> Crimes Digitais
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="mr-2 text-red-500 mt-1"></i>
+                            <span>Espalhar fotos íntimas sem consentimento (revenge porn)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="mr-2 text-red-500 mt-1"></i>
+                            <span>Invasão de contas ou dispositivos (hacking)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="mr-2 text-red-500 mt-1"></i>
+                            <span>Ameaças graves ou chantagem online</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="mr-2 text-red-500 mt-1"></i>
+                            <span>Falsidade ideológica (perfis falsos com dados reais)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-indigo-50 p-6 rounded-lg border border-indigo-100" data-aos="fade-up">
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3 flex items-center">
+                    <i data-feather="info" class="mr-2"></i> Importante
+                </h3>
+                <p class="text-indigo-700">
+                    Muitas ações que começam como cyberbullying podem se tornar crimes digitais dependendo da gravidade. No Brasil, crimes digitais são previstos na Lei Carolina Dieckmann (Lei 12.737/2012) e podem levar a multas e até prisão.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como se proteger -->
+    <section id="protecao" class="section py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
+                <i data-feather="shield" class="mr-3 text-indigo-600"></i> Como se proteger
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <!-- Dica 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="message-circle" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Não responda</h3>
+                    <p class="text-gray-600">
+                        Evite responder mensagens ofensivas. Isso pode piorar a situação e dar mais motivos para o agressor.
+                    </p>
+                </div>
+                
+                <!-- Dica 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="flag" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Denuncie</h3>
+                    <p class="text-gray-600">
+                        Use os mecanismos de denúncia das redes sociais e plataformas. Guarde prints como prova.
+                    </p>
+                </div>
+                
+                <!-- Dica 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Converse</h3>
+                    <p class="text-gray-600">
+                        Procure ajuda de pais, professores ou responsáveis. Não passe por isso sozinho(a).
+                    </p>
+                </div>
+                
+                <!-- Dica 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cuide-se</h3>
+                    <p class="text-gray-600">
+                        Se precisar, busque ajuda psicológica. Sua saúde mental é mais importante.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white border border-gray-200 rounded-lg p-6 shadow-sm" data-aos="fade-up">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i data-feather="alert-triangle" class="mr-2 text-indigo-600"></i> Onde denunciar
+                </h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="mr-2 text-indigo-500 mt-1"></i>
+                        <span><strong>Safernet:</strong> <a href="https://www.safernet.org.br" class="text-indigo-600 hover:underline" target="_blank">www.safernet.org.br</a></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="mr-2 text-indigo-500 mt-1"></i>
+                        <span><strong>Disque 100:</strong> Direitos Humanos (ligação gratuita)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="mr-2 text-indigo-500 mt-1"></i>
+                        <span><strong>Delegacias especializadas:</strong> Procure a delegacia de crimes digitais mais próxima</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="section py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">
+                <i data-feather="award" class="mr-3 text-indigo-600"></i> Quiz Interativo
+            </h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+                Teste seus conhecimentos sobre cyberbullying e crimes digitais. Responda as perguntas abaixo e descubra se você sabe diferenciar cada situação.
+            </p>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto" data-aos="fade-up">
+                <form id="quiz-form">
+                    <!-- Pergunta 1 -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">1. Espalhar fotos íntimas sem permissão é:</h3>
+                        <div class="space-y-3">
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q1" value="cyberbullying" class="mr-2"> Cyberbullying
+                            </label>
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q1" value="crime" class="mr-2"> Crime Digital
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 2 -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">2. Compartilhar prints de conversas para expor alguém é:</h3>
+                        <div class="space-y-3">
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q2" value="cyberbullying" class="mr-2"> Cyberbullying
+                            </label>
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q2" value="crime" class="mr-2"> Crime Digital
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 3 -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">3. Falsidade ideológica em perfis (usar dados reais de outra pessoa) é:</h3>
+                        <div class="space-y-3">
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q3" value="cyberbullying" class="mr-2"> Cyberbullying
+                            </label>
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q3" value="crime" class="mr-2"> Crime Digital
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 4 -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">4. Xingar um colega em grupo de WhatsApp é:</h3>
+                        <div class="space-y-3">
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q4" value="cyberbullying" class="mr-2"> Cyberbullying
+                            </label>
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q4" value="crime" class="mr-2"> Crime Digital
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 5 -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">5. Invadir a conta de rede social de alguém é:</h3>
+                        <div class="space-y-3">
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q5" value="cyberbullying" class="mr-2"> Cyberbullying
+                            </label>
+                            <label class="block quiz-option bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <input type="radio" name="q5" value="crime" class="mr-2"> Crime Digital
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center justify-center">
+                        <i data-feather="send" class="mr-2"></i> Enviar Respostas
+                    </button>
+                </form>
+                
+                <!-- Resultado do Quiz -->
+                <div id="quiz-result" class="hidden mt-8 p-6 bg-indigo-50 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-800 flex items-center">
+                        <i data-feather="bar-chart-2" class="mr-2"></i> Seu Resultado
+                    </h3>
+                    <p class="mb-4">Você acertou <span id="correct-answers" class="font-bold text-indigo-600">0</span> de 5 perguntas.</p>
+                    
+                    <div id="corrections" class="space-y-4"></div>
+                    
+                    <div id="penal-info" class="mt-6 p-4 bg-white rounded-lg border border-gray-200">
+                        <h4 class="font-semibold mb-2 flex items-center">
+                            <i data-feather="alert-octagon" class="mr-2 text-red-500"></i> Penas para Crimes Digitais
+                        </h4>
+                        <p class="text-gray-600">
+                            No Brasil, crimes digitais podem levar a detenção de 3 meses a 2 anos, além de multa (Lei 12.737/2012). Em casos graves como divulgação de imagens íntimas, as penas podem ser maiores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Projeto escolar - TCA sobre Cyberbullying</p>
+            <p class="text-gray-400 text-sm">
+                Desenvolvido para conscientização sobre os perigos do mundo digital
+            </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i data-feather="twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializa AOS e Feather Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            feather.replace();
+            
+            // Menu mobile toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Quiz functionality
+            const quizForm = document.getElementById('quiz-form');
+            const quizResult = document.getElementById('quiz-result');
+            const correctAnswersSpan = document.getElementById('correct-answers');
+            const correctionsDiv = document.getElementById('corrections');
+            const penalInfo = document.getElementById('penal-info');
+            
+            // Respostas corretas
+            const correctAnswers = {
+                q1: 'crime',
+                q2: 'cyberbullying',
+                q3: 'crime',
+                q4: 'cyberbullying',
+                q5: 'crime'
+            };
+            
+            // Explicações para cada pergunta
+            const explanations = {
+                q1: 'Espalhar fotos íntimas sem permissão é considerado crime digital (art. 218-C do Código Penal), com pena de 1 a 5 anos de prisão.',
+                q2: 'Compartilhar prints de conversas para expor alguém pode configurar cyberbullying, a menos que contenha dados privados ou íntimos, quando pode virar crime.',
+                q3: 'Falsidade ideológica em perfis é crime digital previsto no art. 307 do Código Penal, com pena de 1 a 5 anos de prisão.',
+                q4: 'Xingar um colega em grupo de WhatsApp é cyberbullying, a menos que configure ameaça ou calúnia, quando pode virar crime.',
+                q5: 'Invadir a conta de rede social de alguém é crime digital (art. 154-A do Código Penal), com pena de 3 meses a 1 ano de prisão.'
+            };
+            
+            quizForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let correctCount = 0;
+                correctionsDiv.innerHTML = '';
+                
+                // Verifica cada resposta
+                for (let i = 1; i <= 5; i++) {
+                    const questionName = 'q' + i;
+                    const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                    
+                    if (selectedOption) {
+                        const isCorrect = selectedOption.value === correctAnswers[questionName];
+                        
+                        if (isCorrect) {
+                            correctCount++;
+                        }
+                        
+                        // Adiciona correção
+                        const correctionDiv = document.createElement('div');
+                        correctionDiv.className = `p-3 rounded-lg ${isCorrect ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`;
+                        correctionDiv.innerHTML = `
+                            <p class="font-semibold">Pergunta ${i}: ${isCorrect ? 'Correta' : 'Incorreta'}</p>
+                            <p class="text-sm">${explanations[questionName]}</p>
+                        `;
+                        correctionsDiv.appendChild(correctionDiv);
+                    }
+                }
+                
+                // Mostra resultado
+                correctAnswersSpan.textContent = correctCount;
+                quizResult.classList.remove('hidden');
+                
+                // Mostra info sobre penas se houver erros
+                if (correctCount < 5) {
+                    penalInfo.classList.remove('hidden');
+                } else {
+                    penalInfo.classList.add('hidden');
+                }
+                
+                // Rola para o resultado
+                quizResult.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Adiciona efeito de seleção nas opções do quiz
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            quizOptions.forEach(option => {
+                const radio = option.querySelector('input[type="radio"]');
+                
+                option.addEventListener('click', function() {
+                    // Remove a classe selected de todas as opções do mesmo grupo
+                    const groupName = radio.getAttribute('name');
+                    document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+                        r.parentElement.classList.remove('selected', 'bg-indigo-600', 'text-white');
+                    });
+                    
+                    // Adiciona a classe selected à opção clicada
+                    option.classList.add('selected', 'bg-indigo-600', 'text-white');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
